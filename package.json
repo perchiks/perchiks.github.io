@@ -1,0 +1,52 @@
+{
+  "name": "Perchik",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot --inline --port 7777",
+    "test": "webpack-dev-server --hot --port 7777",
+    "build": "webpack -p"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "css-loader": "^0.28.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "html-loader": "^0.4.5",
+    "img-loader": "^2.0.0",
+    "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.5",
+    "prettier-eslint-webpack-plugin": "^0.14.73",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.17.0",
+    "url-loader": "^0.5.8",
+    "vue": "^2.3.3",
+    "vue-loader": "^12.2.1",
+    "vue-template-compiler": "^2.3.3",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "browserslist": [
+    "last 4 versions",
+    "ie 8"
+  ],
+  "dependencies": {
+    "fingerprintjs2": "^1.5.1",
+    "moment": "^2.18.1",
+    "vue-resource": "^1.3.4",
+    "vue-router": "^2.5.3",
+    "vuex": "^2.3.1"
+  }
+}
