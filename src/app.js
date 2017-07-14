@@ -2,6 +2,8 @@ import Vue from 'vue';
 import VueResource from 'vue-resource';
 //import '../public/assets/fonts/_fonts.scss';
 import store from './store';
+import './styles/index.scss';
+
 /**
  * Pages
  */

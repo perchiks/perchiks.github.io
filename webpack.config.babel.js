@@ -17,7 +17,8 @@ const config = {
         publicPath: '/'
     },
     devServer: {
-        publicPath: '/'
+        publicPath: '/dist/js',
+        contentBase: path.resolve(__dirname)
     },
     resolve: {
         modules: [LIBS, NODE_MODULES],
@@ -65,12 +66,6 @@ const config = {
                         minimize: true
                     }
                 }],
-            },
-            { test: /\.hbs$/, loader: "handlebars-loader", query: {
-                helperDirs: [
-                    __dirname + "/helpers"
-                ]
-                }
             },
             {
                 test: /\.css$/,
