@@ -3,11 +3,6 @@ import Vue from 'vue';
 export const Container = Vue.component('container', {
     template: `<div :class="className" :style="style"><slot></slot></div>`,
     props: ['align', 'addClass'],
-    data: function () {
-        return {
-
-        }
-    },
     computed: {
         className() {
             if (this.addClass) {
@@ -53,9 +48,14 @@ export const Container = Vue.component('container', {
 });
 
 export const Column = Vue.component('column', {
-    template: `<div :style="style"><slot></slot></div>`,
-    props: ['size', 'grow'],
+    template: `<div :class="className" :style="style"><slot></slot></div>`,
+    props: ['size', 'grow', 'addClass'],
     computed: {
+        className() {
+            if (this.addClass) {
+                return 'column';
+            }
+        },
         style() {
             let generated = {
                 flexBasis: '100%',
