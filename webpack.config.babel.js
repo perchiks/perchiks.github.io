@@ -18,7 +18,12 @@ const config = {
     },
     devServer: {
         publicPath: '/dist/js',
-        contentBase: path.resolve(__dirname)
+        contentBase: path.resolve(__dirname),
+        historyApiFallback: {
+            rewrites: [
+                { from: /.*/, to: `/200.html` }
+            ]
+        }
     },
     resolve: {
         modules: [LIBS, NODE_MODULES],

@@ -11,7 +11,8 @@ const store = new Vuex.Store({
     state: {
         user: {
             utm: 'direct',
-            uid: ''
+            uid: '',
+            fp: false
         }
     },
     mutations: {
@@ -20,6 +21,9 @@ const store = new Vuex.Store({
         },
         uid(state, value) {
             state.user.uid = value;
+        },
+        fp(state) {
+            state.user.fp = true;
         }
     }
 });

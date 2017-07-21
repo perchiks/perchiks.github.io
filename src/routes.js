@@ -52,6 +52,11 @@ router.beforeEach((to, from, next) => {
         Vue.cookie.set('utm_data', JSON.stringify(to.query), { expires: '1D' });
         store.commit('utm', to.query);
     }
+    console.log(to.query);
+    if(to.query.hasOwnProperty('fp')) {
+        store.commit('fp');
+        console.log('fp');
+    }
     next();
 });
 
