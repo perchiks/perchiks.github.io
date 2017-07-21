@@ -32,6 +32,7 @@
     "prettier-eslint-webpack-plugin": "^0.14.73",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.17.0",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "url-loader": "^0.5.8",
     "vue": "^2.3.3",
     "vue-loader": "^12.2.1",

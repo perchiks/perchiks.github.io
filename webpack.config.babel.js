@@ -3,12 +3,12 @@ import path from 'path';
 import { PrettierEslintPlugin } from 'prettier-eslint-webpack-plugin';
 import fs from 'fs';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const eslintConfig = fs.readFileSync('.eslintrc');
 const LIBS = path.resolve(__dirname, 'libs');
 const NODE_MODULES = path.resolve(__dirname, 'node_modules');
 const config = {
-
     context: path.resolve(__dirname, 'src'),
     entry: ['./app.js'],
     output: {
@@ -30,13 +30,16 @@ const config = {
         rules: [
             {
                 test: /\.js$/,
-                include: path.resolve(__dirname, 'src'),
+                include: [
+                    path.resolve(__dirname, 'src'),
+                    path.resolve('node_modules/vue-session')
+                ],
                 exclude: [NODE_MODULES],
                 use: [{
                     loader: 'babel-loader',
                     options: {
                         presets: [
-                            ['latest']
+                            ['es2015']
                         ],
                         plugins: ["transform-class-properties"]
                     }
@@ -97,6 +100,12 @@ const config = {
                     loaders: {
                         scss: 'style!css!sass'
                     }
+                }
+            }),
+            new UglifyJSPlugin({
+                uglifyOptions: {
+                    ie8: false,
+                    ecma: 8
                 }
             })
     ]
