@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueResource from 'vue-resource';
 import firebase from 'firebase';
+import VueSession from 'vue-session';
 
 import store from './store';
 import './styles/index.scss';
@@ -11,7 +12,7 @@ import './styles/index.scss';
 import router from './routes';
 
 Vue.use(VueResource);
-
+Vue.use(VueSession);
 
 /**
  * Main component
