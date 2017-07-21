@@ -1,0 +1,73 @@
+$path: '/dist/fonts/';
+
+@font-face {
+  font-family: 'Houschka';
+  src: url($path + 'hinted-HouschkaRounded-Thin.eot');
+  src: local('Houschka Rounded Thin'), local('HouschkaRounded-Thin'),
+  url($path + 'hinted-HouschkaRounded-Thin.eot?#iefix') format('embedded-opentype'),
+  url($path + 'hinted-HouschkaRounded-Thin.woff2') format('woff2'),
+  url($path + 'hinted-HouschkaRounded-Thin.woff') format('woff'),
+  url($path + 'hinted-HouschkaRounded-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Houschka';
+  src: url($path + 'hinted-HouschkaRounded-ExtraBold.eot');
+  src: local('Houschka Rounded Extra Bold'), local('HouschkaRounded-ExtraBold'),
+  url($path + 'hinted-HouschkaRounded-ExtraBold.eot?#iefix') format('embedded-opentype'),
+  url($path + 'hinted-HouschkaRounded-ExtraBold.woff2') format('woff2'),
+  url($path + 'hinted-HouschkaRounded-ExtraBold.woff') format('woff'),
+  url($path + 'hinted-HouschkaRounded-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Houschka';
+  src: url($path + 'hinted-HouschkaRounded-Medium.eot');
+  src: local('Houschka Rounded Medium'), local('HouschkaRounded-Medium'),
+  url($path + 'hinted-HouschkaRounded-Medium.eot?#iefix') format('embedded-opentype'),
+  url($path + 'hinted-HouschkaRounded-Medium.woff2') format('woff2'),
+  url($path + 'hinted-HouschkaRounded-Medium.woff') format('woff'),
+  url($path + 'hinted-HouschkaRounded-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Houschka';
+  src: url($path + 'hinted-HouschkaRounded-Light.eot');
+  src: local('Houschka Rounded Light'), local('HouschkaRounded-Light'),
+  url($path + 'hinted-HouschkaRounded-Light.eot?#iefix') format('embedded-opentype'),
+  url($path + 'hinted-HouschkaRounded-Light.woff2') format('woff2'),
+  url($path + 'hinted-HouschkaRounded-Light.woff') format('woff'),
+  url($path + 'hinted-HouschkaRounded-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Houschka';
+  src: url$path + ('hinted-HouschkaRounded-DemiBold.eot');
+  src: local('Houschka Rounded DemiBold'), local('HouschkaRounded-DemiBold'),
+  url($path + 'hinted-HouschkaRounded-DemiBold.eot?#iefix') format('embedded-opentype'),
+  url($path + 'hinted-HouschkaRounded-DemiBold.woff2') format('woff2'),
+  url($path + 'hinted-HouschkaRounded-DemiBold.woff') format('woff'),
+  url($path + 'hinted-HouschkaRounded-DemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Houschka';
+  src: url($path + 'hinted-HouschkaRounded-Bold.eot');
+  src: local('Houschka Rounded Bold'), local('HouschkaRounded-Bold'),
+  url($path + 'hinted-HouschkaRounded-Bold.eot?#iefix') format('embedded-opentype'),
+  url($path + 'hinted-HouschkaRounded-Bold.woff2') format('woff2'),
+  url($path + 'hinted-HouschkaRounded-Bold.woff') format('woff'),
+  url($path + 'hinted-HouschkaRounded-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}

@@ -10,7 +10,7 @@ const NODE_MODULES = path.resolve(__dirname, 'node_modules');
 const config = {
 
     context: path.resolve(__dirname, 'src'),
-    entry: ['babel-polyfill', './app.js'],
+    entry: ['./app.js'],
     output: {
         path: path.resolve(__dirname, 'dist/js'),
         filename: 'bundle.js',

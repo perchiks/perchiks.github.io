@@ -1,6 +1,11 @@
 @import '../../libs/normalize-css/normalize.css';
 @import "colors";
+@import "fonts";
 
 html, body, main {
   height: 100%;
+}
+
+body {
+  font-family: 'Houschka';
 }
