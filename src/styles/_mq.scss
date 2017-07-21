@@ -1,0 +1,9 @@
+$small: "only screen and (min-width: 48em) and (max-width: 46rem)";
+$medium: "only screen and (min-width: 62em) and (max-width: 61rem)";
+$large: "only screen and (min-width: 75em) and (max-width: 71rem)";
+
+@mixin mq($query) {
+  @media #{$query} {
+    @content;
+  }
+}

@@ -15,6 +15,7 @@
         height: 100%;
     }
     figure {
+        margin: 0;
         img {
             width: 100%;
             height: auto;
@@ -23,7 +24,9 @@
     h1 {
         color: $primary;
         text-align: center;
+        margin-left: 2.25rem;
     }
+
 </style>
 
 <script>
