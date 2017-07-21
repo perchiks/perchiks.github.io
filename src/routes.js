@@ -11,6 +11,7 @@ Vue.use(VueCookie);
  */
 import IndexPage from './pages/IndexPage.vue';
 import OrderPage from './pages/OrderPage.vue';
+import PageNotFound from './pages/404.vue';
 
 
 /**
@@ -22,8 +23,9 @@ import OrderPage from './pages/OrderPage.vue';
  * Routes configuration
  */
 const routes = [
-    { path: '/', component: IndexPage },
+    { path: '/', component: IndexPage},
     { path: '/order', component: OrderPage, props: { title: 'Сделать заказ' }},
+    { path: '/404', component: PageNotFound, props: {title: 'Страница не найдена'}},
     { path: '*', redirect: '/404' }
 ];
 
