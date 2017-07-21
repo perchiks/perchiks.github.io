@@ -7,3 +7,4 @@ script: webpack -p
 deploy:
   provider: surge
   domain: pepper.ink
+  skip_cleanup: true
