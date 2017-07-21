@@ -19,28 +19,36 @@
         flex-basis: 100%;
         align-items: center;
         justify-content: center;
+        @include media($small) {
+            flex-basis: 95%;
+            .column {
+                width: 95%;
+            }
+            h1 {
+                font-size: 4rem;
+            }
+        }
+        @include media($medium) {
+            flex-basis: 50%;
+            .column {
+                width: 50%;
+            }
+            h1 {
+                font-size: 4rem;
+            }
+        }
+        @include media($large) {
+            flex-basis: 25%;
+            .column {
+                width: 25%;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
         .column {
             display: flex;
             flex-direction: column;
-            flex-basis: 100/12*4%;
-            @include media($small) {
-                flex-basis: 80%;
-                h1 {
-                    font-size: 4rem;
-                }
-            }
-            @include media($medium) {
-                flex-basis: 80%;
-                h1 {
-                    font-size: 4rem;
-                }
-            }
-            @include media($large) {
-                flex-basis: 100/12*4%;
-                h1 {
-                    font-size: 2.5rem;
-                }
-            }
         }
     }
     figure {

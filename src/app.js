@@ -23,7 +23,6 @@ const app = new Vue({
     el: '#app',
     template: `
         <main>
-            <pre>{{user}}</pre>
             <router-view></router-view>
         </main>
     `,

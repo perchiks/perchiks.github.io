@@ -5,9 +5,19 @@
                 <label><input type="phone" v-model="phone" placeholder="Телефон"></label>
                 <label><input type="email" v-model="email" placeholder="Электронная почта"></label>
                 <label><textarea type="text" v-model="details" placeholder="Детали заказа"></textarea></label>
-                <label><input type="file" @change="loadFile($event)" v-show="!file"></label>
-                <label v-if="file">Файл загружен</label>
-                <a @click="send()">Send</a>
+                <label id="file" v-show="!file">
+                    <span class="button" v-if="!file">Выбрать</span>
+                    <mark>
+                        <template v-if="!file">
+                            Файл не выбран
+                        </template>
+                        <template v-if="file">
+                            Файл загружен
+                        </template>
+                    </mark>
+                    <input type="file" @change="loadFile($event)">
+                </label>
+                <label><a @click="send()">Отправить</a></label>
             </section>
             <section v-show="orderSent && orderSent !== 'error'">
                 <h2>Заказ отправлен. Скоро мы с вами свяжемся</h2>
@@ -16,12 +26,70 @@
 </template>
 
 <style lang="scss" scoped="scoped">
+    @import "../styles/_colors.scss";
     section {
         display: flex;
         flex-direction: column;
+        flex-basis: 80%;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
         label {
             display: inline-flex;
             flex: 1;
+            align-items: center;
+            justify-content: center;
+            &:not(:first-of-type) {
+                margin-top: 1rem;
+            }
+            input, textarea {
+                width: 100%;
+                border-radius: 4px;
+                font-size: 0.75em;
+                line-height: 1.0625em;
+                border: 1px solid #D3D3D3;
+                padding: .5rem;
+            }
+            a {
+                border: 1px solid $primary;
+                padding: .5rem;
+                border-radius: 4px;
+                color: $primary;
+                text-transform: uppercase;
+            }
+        }
+        #file {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 4px;
+            font-size: 0.75em;
+            line-height: 1.0625em;
+            border: 1px solid #D3D3D3;
+            .button, > mark {
+                cursor: pointer;
+                display: inline-flex;
+                padding: .5rem;
+            }
+            .button {
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                height: 100%;
+                text-align: center;
+                order: 2;
+                background: rgba($primary, .75);
+            }
+            > mark{
+                background: transparent;     /* example */
+                flex: 1;
+            }
+            input[type=file]{
+                position: absolute;
+                top: 0;
+                opacity: 0
+            }
         }
     }
 </style>
