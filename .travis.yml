@@ -1,5 +1,8 @@
 language: node_js
 node_js:
   - "8.0.0"
+before_script:
+  - npm install -g webpack
+script: webpack -p
 after_success:
   - surge --domain pepper.ink
