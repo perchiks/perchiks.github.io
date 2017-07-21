@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueResource from 'vue-resource';
+import VueAnalytics from 'vue-analytics'
 import firebase from 'firebase';
 
 import store from './store';
@@ -11,6 +12,10 @@ import './styles/index.scss';
 import router from './routes';
 
 Vue.use(VueResource);
+Vue.use(VueAnalytics, {
+    id: 'UA-102913097-1',
+    router
+});
 
 /**
  * Main component

@@ -48,6 +48,7 @@ router.beforeEach((to, from, next) => {
             store.commit('uid', result);
         });
     }
+    Vue.$ga.set('userId', store.state.user.uid);
     if(to.query.hasOwnProperty('utm_source')) {
         Vue.cookie.set('utm_data', JSON.stringify(to.query), { expires: '1D' });
         store.commit('utm', to.query);
@@ -57,6 +58,13 @@ router.beforeEach((to, from, next) => {
         console.log('fp');
     }
     next();
+
+});
+router.afterEach((to, from, next) => {
+    window.yaCounter45386919.hit(to.path, {title: document.title, referer: from.path});
+    window.yaCounter45386919.userParams({
+        userData: store.state.user
+    });
 });
 
 export default router;
