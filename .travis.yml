@@ -2,4 +2,4 @@ language: node_js
 node_js:
   - "8.0.0"
 after_success:
-  - surge --project ./ --domain pepper.ink
+  - surge --domain pepper.ink
