@@ -35,3 +35,11 @@ h4 {
 h5, p {
   font-size: 1rem;
 }
+
+.blog {
+  .content {
+    img {
+      width: 100%;
+    }
+  }
+}

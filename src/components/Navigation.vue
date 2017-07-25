@@ -17,6 +17,9 @@
         flex-direction: row;
         div {
             display: inline-flex;
+            a img {
+                //opacity: 0;
+            }
             &:last-of-type {
                 flex-grow: 1;
                 h1 {

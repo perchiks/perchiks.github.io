@@ -1,6 +1,9 @@
 <template>
     <div class="container">
         <div class="column">
+            <blog class="blog" feed="https://medium.com/feed/@ringer"></blog>
+        </div>
+        <div class="column">
             <figure>
                 <img src="/dist/img/logo.svg">
                 <figcaption><h1>Скоро здесь будет горячо</h1></figcaption>
@@ -13,7 +16,6 @@
     @import '../styles/_colors.scss';
     @import '../styles/_mq.scss';
     .container {
-        height: 100%;
         display: flex;
         flex-direction: row;
         flex-basis: 100%;
@@ -67,12 +69,12 @@
 </style>
 
 <script>
-    import {Container, Column} from '../components/grid';
+    import Blog from '../components/blog.vue';
+
     export default {
         name: 'IndexPage',
-        children: {
-            container: Container,
-            column: Column
+        components: {
+            blog: Blog
         }
     }
 </script>

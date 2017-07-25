@@ -63,10 +63,12 @@ router.beforeEach((to, from, next) => {
 
 });
 router.afterEach((to, from, next) => {
-    window.yaCounter45386919.hit(to.path, {title: document.title, referer: from.path});
-    window.yaCounter45386919.userParams({
-        userData: store.state.user
-    });
+    setTimeout(() => {
+        window.yaCounter45386919.hit(to.path, {title: document.title, referer: from.path});
+        window.yaCounter45386919.userParams({
+            userData: store.state.user
+        });
+    }, 500);
 });
 
 export default router;
