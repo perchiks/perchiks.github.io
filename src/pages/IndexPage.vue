@@ -1,13 +1,11 @@
 <template>
     <div class="container">
         <div class="column">
-            <blog class="blog" feed="https://medium.com/feed/@ringer"></blog>
-        </div>
-        <div class="column">
             <figure>
                 <img src="/dist/img/logo.svg">
                 <figcaption><h1>Скоро здесь будет горячо</h1></figcaption>
             </figure>
+            <blog class="blog"></blog>
         </div>
     </div>
 </template>
