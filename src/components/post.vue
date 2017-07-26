@@ -48,7 +48,7 @@
             padding-top: 2rem;
             padding-right: 2.25rem;
             h3 {
-                font-family: Houschka Rounded;
+                font-family: 'Houschka';
                 font-style: normal;
                 font-weight: 500;
                 line-height: normal;
@@ -61,7 +61,7 @@
                 height: 3.875rem;
                 overflow: hidden;
                 display: block;
-                font-family: Houschka Rounded;
+                font-family: 'Houschka';
                 font-style: normal;
                 font-weight: 600;
                 line-height: 1.375rem;
@@ -84,7 +84,7 @@
                 opacity: 0;
                 background: #EE3224;
                 border-radius: 2px;
-                font-family: Houschka Rounded;
+                font-family: 'Houschka';
                 font-style: normal;
                 font-weight: 500;
                 line-height: normal;
@@ -105,7 +105,7 @@
                     li {
                         display: inline-block;
                         height: 0.75rem;
-                        font-family: Houschka Rounded;
+                        font-family: 'Houschka';
                         font-style: normal;
                         font-weight: 500;
                         line-height: normal;
