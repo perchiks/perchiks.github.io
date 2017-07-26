@@ -26,8 +26,7 @@
         background: rgba(238, 50, 36, 0.5);
         box-shadow: 5px 5px 6px rgba(155, 11, 0, 0.25);
         border-radius: 5px;
-        width: auto;
-        height: auto;
+        max-width: 95%;
         width: 25rem;
         height: 12.5rem;
         > img {
