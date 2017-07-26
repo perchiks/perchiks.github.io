@@ -1,31 +1,50 @@
 <template>
     <article>
-        <a class="twitter-timeline" data-lang="ru" href="https://twitter.com/pepper_ink">Tweets by pepper_ink</a>
+        <img :src="item.file">
+        <h3><router-link :to="'/post/' + item.id">{{item.title}}</router-link></h3>
+        <div class="content" v-html="item.content"></div>
     </article>
 </template>
 
 <style lang="scss" scoped="scoped">
     @import '../styles/_colors.scss';
     article {
-        display: flex;
-        flex-direction: column;
-        .title {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-        }
-        .title {
-            h3 a {
-                text-decoration: none;
-                color: $primary;
-            }
+        img {
+            width: 100%;
         }
     }
 </style>
 
 <script>
+    import firebase from 'firebase';
+
     export default {
-        name: 'Blog'
+        name: 'Blog',
+        props: ['post', 'random'],
+        data() {
+            return {
+                item: {
+                    file: '',
+                    content: '',
+                    title: ''
+                }
+            }
+        },
+        mounted() {
+            let self = this;
+            if (this.random === 'true') {
+                let dbRef = firebase.database().ref(`posts`);
+                dbRef.on('value', function(snapshot) {
+                    let items = snapshot.val();
+                    console.log(typeof items);
+                    self.item = items[Math.floor(Math.random()*items.length)];
+                });
+            } else {
+                let dbRef = firebase.database().ref(`posts/${self.post}`);
+                dbRef.on('value', function(snapshot) {
+                    self.item = snapshot.val();
+                });
+            }
+        }
     }
 </script>

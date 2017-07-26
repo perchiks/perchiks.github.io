@@ -1,18 +1,49 @@
 <template>
-    <div class="container">
-        <div class="column">
-            <figure>
-                <img src="/dist/img/logo.svg">
-                <figcaption><h1>Скоро здесь будет горячо</h1></figcaption>
-            </figure>
-            <blog class="blog"></blog>
+    <article>
+        <header>
+            <div class="logo"><img src="/dist/img/logo.svg"></div>
+            <nav></nav>
+        </header>
+        <div class="rnd">
+            <post></post>
         </div>
-    </div>
+        <div id="bg"></div>
+        <!--<h1>Скоро здесь будет горячо</h1>-->
+    </article>
 </template>
 
 <style lang="scss" scoped="scoped">
     @import '../styles/_colors.scss';
     @import '../styles/_mq.scss';
+    //------- NEW -----------
+    article {
+        display: flex;
+        height: 60%;
+        flex-direction: column;
+        .rnd {
+            align-self: center;
+            justify-self: center;
+        }
+        #bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -9999;
+            background: linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.4)), url(/dist/img/bg.png);
+        }
+        header {
+            display: flex;
+            flex-direction: row;
+            flex-basis: 100%;
+            nav {
+                flex-grow: 1;
+            }
+        }
+    }
+
+    //-----------------------
     .container {
         display: flex;
         flex-direction: row;
@@ -68,11 +99,13 @@
 
 <script>
     import Blog from '../components/blog.vue';
+    import Post from '../components/post.vue';
 
     export default {
         name: 'IndexPage',
         components: {
-            blog: Blog
+            blog: Blog,
+            post: Post
         }
     }
 </script>

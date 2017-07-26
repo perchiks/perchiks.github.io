@@ -12,6 +12,10 @@ Vue.use(VueCookie);
 import IndexPage from './pages/IndexPage.vue';
 import OrderPage from './pages/OrderPage.vue';
 import PageNotFound from './pages/404.vue';
+import SignIn from './pages/signin.vue';
+import Manage from './pages/manage.vue';
+import Post from './pages/post.vue';
+import editPost from './pages/editPost.vue';
 
 
 /**
@@ -25,6 +29,10 @@ import PageNotFound from './pages/404.vue';
 const routes = [
     { path: '/', component: IndexPage},
     { path: '/order', component: OrderPage, props: { title: 'Сделать заказ' }},
+    { path: '/login', component: SignIn, props: {title: 'Вход'}},
+    { path: '/manage', component: Manage, props: {title: 'Посты'}},
+    { path: '/post', component: Post, props: {title: 'Посты - Создать'}},
+    { path: '/post/:post', component: editPost, props: {title: ''}},
     { path: '/404', component: PageNotFound, props: {title: 'Страница не найдена'}},
     { path: '*', redirect: '/404' }
 ];

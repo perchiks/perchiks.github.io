@@ -1,10 +1,9 @@
 <template>
+    <section>
         <form>
             <section v-show="!orderSent">
-                <label><input type="text" v-model="fullName" placeholder="Ваше имя"></label>
-                <label><input type="phone" v-model="phone" placeholder="Телефон"></label>
-                <label><input type="email" v-model="email" placeholder="Электронная почта"></label>
-                <label><textarea type="text" v-model="details" placeholder="Детали заказа"></textarea></label>
+                <label><input type="text" v-model="post.title" placeholder="Заголовок"></label>
+                <label><textarea v-model="post.content" placeholder="Содержание" rows="15"></textarea></label>
                 <label id="file">
                     <span class="button" v-if="!loaded">Выбрать</span>
                     <mark>
@@ -17,16 +16,18 @@
                     </mark>
                     <input type="file" @change="loadFile($event)">
                 </label>
+                <label><input type="number" v-model="post.likes" placeholder="Лайки"></label>
                 <label><a @click="send()">Отправить</a></label>
             </section>
             <section v-show="orderSent && orderSent !== 'error'">
-                <h4>Заказ отправлен. Скоро мы с вами свяжемся</h4>
+                <h4>Пост сохранен</h4>
             </section>
         </form>
+    </section>
 </template>
 
 <style lang="scss" scoped="scoped">
-    @import "../styles/_colors.scss";
+    @import "../styles/colors";
     section {
         display: flex;
         flex-direction: column;
@@ -98,33 +99,24 @@
     import firebase from 'firebase';
 
     export default {
-        name: 'Order',
-        data: function() {
-           return {
-               fullName: '',
-               phone: '',
-               email: '',
-               details: '',
-               orderSent: false,
-               file: false,
-               loaded: false
-           }
+        name: 'editPost',
+        data() {
+            return {
+                post: {},
+                orderSent: false,
+                file: false,
+                loaded: false
+            }
         },
         methods: {
             send() {
-                let utm = this.$store.state.user.utm;
-                let uid = this.$store.state.user.uid;
                 let self = this;
-                let order = Math.random().toString(36).substring(7);
-                firebase.database().ref(`orders/${order}`).set({
-                    fullName: this.fullName,
-                    phone: this.phone,
-                    email: this.email,
-                    details: this.details,
-                    utm: utm,
-                    uid: uid,
+                firebase.database().ref(`posts/${self.$route.params.post}`).set({
+                    id: self.$route.params.post,
+                    title: this.post.title,
+                    content: this.post.content,
                     date: Date.now(),
-                    completed: false,
+                    likes: this.post.likes,
                     file: (this.file) ? this.file : 'No file'
                 }).then(function(data) {
                     self.orderSent = true;
@@ -133,16 +125,31 @@
                 });
             },
             loadFile(event) {
+                console.log('file event');
                 let file = event.target.files[0];
                 const name = file.name;
                 let storageRef = firebase.storage().ref();
-                let ref = storageRef.child(`orders/${this.$store.state.user.uid}-${name}`);
+                let ref = storageRef.child(`posts/${Date.now()}-${name}`);
                 let self = this;
                 ref.put(file).then(function(snapshot) {
                     self.loaded = true;
-                    self.file = snapshot.metadata.fullPath;
+                    self.file = snapshot.downloadURL;
                 });
             }
+        },
+        mounted() {
+            let self = this;
+            firebase.auth().onAuthStateChanged(function(user) {
+                if (user) {
+                    let dbRef = firebase.database().ref(`posts/${self.$route.params.post}`);
+                    dbRef.on('value', function(snapshot) {
+                        self.post = snapshot.val();
+                        self.file = self.post.file;
+                    });
+                } else {
+                    this.$router.push({path: '/login'});
+                }
+            });
         }
     }
 </script>
