@@ -18,7 +18,6 @@
             align-items: center;
             justify-content: center;
             flex-basis: 80%;
-            margin-top: 25%;
         }
         label {
             display: inline-flex;
