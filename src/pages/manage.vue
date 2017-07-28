@@ -48,7 +48,7 @@
                         self.posts = snapshot.val();
                     });
                 } else {
-                    this.$router.push({path: '/login'});
+                    self.$router.push({path: '/login'});
                 }
             });
         }

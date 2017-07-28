@@ -159,7 +159,7 @@
                         self.file = self.post.file;
                     });
                 } else {
-                    this.$router.push({path: '/login'});
+                    self.$router.push({path: '/login'});
                 }
             });
         }

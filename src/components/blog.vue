@@ -49,7 +49,6 @@
                 let dbRef = firebase.database().ref(`posts`);
                 dbRef.on('value', function(snapshot) {
                     let items = snapshot.val();
-                    console.log(typeof items);
                     self.item = items[Math.floor(Math.random()*items.length)];
                 });
             } else {

@@ -146,6 +146,14 @@
                     self.file = snapshot.downloadURL;
                 });
             }
+        },
+        mounted() {
+            let self = this;
+            firebase.auth().onAuthStateChanged(function(user) {
+                if (!user) {
+                    self.$router.push({path: '/login'});
+                }
+            });
         }
     }
 </script>
