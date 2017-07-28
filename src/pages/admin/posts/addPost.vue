@@ -7,20 +7,17 @@
                 <label><textarea v-model="post.content" placeholder="Короткое описание" rows="3"></textarea></label>
                 <label><textarea v-model="post.fullContent" placeholder="Полный текст" rows="15"></textarea></label>
                 <label id="file">
-                    <span class="button" v-if="!loaded && !post.file">Выбрать</span>
-                    <span class="button" v-if="post.file" @click="deleteFile()">Удалить</span>
+                    <span class="button" v-if="!loaded">Выбрать</span>
                     <mark>
-                        <span v-if="!loaded && !post.file">
+                        <span v-if="!loaded">
                             Файл не выбран
                         </span>
-                        <span v-if="loaded && !post.file">
+                        <span v-if="loaded">
                             Файл загружен
                         </span>
-                        <span v-if="post.file">{{ post.file }}</span>
                     </mark>
                     <input type="file" @change="loadFile($event)">
                 </label>
-                <label><input type="number" v-model="post.likes" placeholder="Лайки"></label>
                 <label><a @click="send()">Отправить</a></label>
             </section>
             <section v-show="orderSent && orderSent !== 'error'">
@@ -31,7 +28,7 @@
 </template>
 
 <style lang="scss" scoped="scoped">
-    @import "../styles/colors";
+    @import "../../../styles/colors";
     section {
         display: flex;
         flex-direction: column;
@@ -101,16 +98,21 @@
 
 <script>
     import firebase from 'firebase';
-    import adminNavigation from '../components/admin/adminNavigation.vue'
+    import adminNavigation from '../../../components/admin/adminNavigation.vue'
+    import requireAuth from '../../../mixins/requireAuth';
 
     export default {
-        name: 'editPost',
+        name: 'Post',
+        mixins: [requireAuth],
         components: {
             navigation: adminNavigation
         },
         data() {
             return {
-                post: {},
+                post: {
+                    title: '',
+                    content: ''
+                },
                 orderSent: false,
                 file: false,
                 loaded: false
@@ -119,14 +121,15 @@
         methods: {
             send() {
                 let self = this;
-                firebase.database().ref(`posts/${self.$route.params.post}`).set({
-                    id: self.$route.params.post,
-                    title: self.post.title,
-                    content: self.post.content,
+                let post = Math.random().toString(36).substring(7);
+                firebase.database().ref(`posts/${post}`).set({
+                    id: post,
+                    title: this.post.title,
+                    content: this.post.content,
                     date: Date.now(),
-                    likes: self.post.likes,
-                    fullContent: self.post.fullContent,
-                    file: (this.file) ? this.file : 'No file'
+                    fullContent: this.post.fullContent,
+                    file: (this.file) ? this.file : 'No file',
+                    likes: 0
                 }).then(function(data) {
                     self.orderSent = true;
                 }).catch(function(err) {
@@ -134,6 +137,7 @@
                 });
             },
             loadFile(event) {
+                console.log('file event');
                 let file = event.target.files[0];
                 const name = file.name;
                 let storageRef = firebase.storage().ref();
@@ -143,25 +147,7 @@
                     self.loaded = true;
                     self.file = snapshot.downloadURL;
                 });
-            },
-            deleteFile() {
-                this.file = false;
-                this.post.file = '';
             }
-        },
-        mounted() {
-            let self = this;
-            firebase.auth().onAuthStateChanged(function(user) {
-                if (user) {
-                    let dbRef = firebase.database().ref(`posts/${self.$route.params.post}`);
-                    dbRef.on('value', function(snapshot) {
-                        self.post = snapshot.val();
-                        self.file = self.post.file;
-                    });
-                } else {
-                    self.$router.push({path: '/login'});
-                }
-            });
         }
     }
 </script>
