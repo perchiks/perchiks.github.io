@@ -8,16 +8,40 @@
         </div>
         <div class="content" v-html="item.fullContent"></div>
         <div class="share">
-            <a :href="tweetUrl" target="_blank"><img src="/dist/img/retweet.svg"></a>
+            <a :href="tweetUrl" target="_blank"><img src="/dist/img/retweet_b.svg"></a>
         </div>
     </article>
 </template>
 
 <style lang="scss" scoped="scoped">
+    article {
+        display: flex;
+        flex-direction: column;
+        img {
+            width: 100%;
+        }
+        h1 {
 
+        }
+        .meta, .share {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            a {
+                img {
+                    height: 1em;
+                    display: inline;
+                }
+            }
+        }
+    }
 </style>
 
 <script>
+    import firebase from 'firebase';
+    import moment from 'moment';
+
     export default {
         name: 'fullPost',
         data() {

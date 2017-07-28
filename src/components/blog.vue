@@ -1,5 +1,5 @@
 <template>
-    <router-link tag="article" :to="'/post/' + item.id">
+    <router-link tag="article" :to="'/admin/post/' + item.id">
         <div>{{item.id}}</div>
         <div>{{item.content}}</div>
         <div><img :src="item.file"></div>

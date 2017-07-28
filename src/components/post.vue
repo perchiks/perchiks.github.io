@@ -172,7 +172,7 @@
                 return `https://twitter.com/intent/tweet?text=${encodeURI(this.item.content)}&url=${encodeURI('https://pepper.ink')}&hashtags=pepper_ink,перчик&via=pepper_ink`;
             },
             fullLink() {
-                return `/blog/${this.item.id}`;
+                return `/blog/post/${this.item.id}`;
             }
         },
         methods: {

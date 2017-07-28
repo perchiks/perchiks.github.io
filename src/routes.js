@@ -17,6 +17,9 @@ import Manage from './pages/manage.vue';
 import Post from './pages/post.vue';
 import editPost from './pages/editPost.vue';
 import fullPost from './pages/fullPost.vue';
+import Blog from './pages/blog.vue';
+import BlogAll from './pages/blog/all.vue';
+import Outlet from './pages/outlet.vue';
 
 
 /**
@@ -31,10 +34,17 @@ const routes = [
     { path: '/', component: IndexPage},
     { path: '/order', component: OrderPage, props: { title: 'Сделать заказ' }},
     { path: '/login', component: SignIn, props: {title: 'Вход'}},
-    { path: '/manage', component: Manage, props: {title: 'Посты'}},
-    { path: '/post', component: Post, props: {title: 'Посты - Создать'}},
-    { path: '/post/:post', component: editPost, props: {title: ''}},
-    { path: '/blog/:id', component: fullPost, props: {title: 'Блог'}},
+    { path: '/admin', component: Outlet, children: [
+        { path: 'manage', component: Manage, props: {title: 'Посты'}},
+        { path: 'post', component: Post, props: {title: 'Посты - Создать'}},
+        { path: 'post/:post', component: editPost, props: {title: ''}},
+    ]},
+    { path: '/blog', component: Outlet, children: [
+        { path: 'all', component: BlogAll, props: {title: 'Блог'}},
+        { path: '', redirect: 'all'},
+        { path: 'post/:id', component: fullPost, props: {title: 'Блог'}},
+        { path: '*', redirect: 'all'}
+    ]},
     { path: '/404', component: PageNotFound, props: {title: 'Страница не найдена'}},
     { path: '*', redirect: '/404' }
 ];
