@@ -30,14 +30,13 @@
         methods: {
             auth() {
                 let self = this;
-                firebase.auth().createUserWithEmailAndPassword(this.email, this.password).catch(function(error) {
+                firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(function() {
+                    self.$router.push({ path: '/manage' });
+                }).catch(function(error) {
                     // Handle Errors here.
                     let errorCode = error.code;
                     let errorMessage = error.message;
-                    console.log('login error');
-                    if (!errorMessage) {
-                        self.$router.push({ path: '/manage' });
-                    }
+                    console.log('login error', error);
                 });
             }
         }

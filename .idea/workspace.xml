@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="12c0af46-6061-4060-920e-825eabab36ea" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/signin.vue" afterPath="$PROJECT_DIR$/src/pages/signin.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,9 +73,11 @@
       <file leaf-file-name="signin.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/signin.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="285">
+              <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+              <folding>
+                <element signature="e#335#389#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -439,12 +440,12 @@
       <workItem from="1501076036582" duration="886000" />
       <workItem from="1501076979962" duration="45000" />
       <workItem from="1501078863846" duration="69000" />
-      <workItem from="1501226260676" duration="5463000" />
+      <workItem from="1501226260676" duration="5548000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75958000" />
+    <option name="totallyTimeSpent" value="76043000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="23" width="1920" height="987" extended-state="0" />
@@ -822,9 +823,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/signin.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="285">
+          <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+          <folding>
+            <element signature="e#335#389#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
