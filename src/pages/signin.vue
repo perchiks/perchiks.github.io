@@ -66,7 +66,7 @@
         methods: {
             auth() {
                 let self = this;
-                firebase.auth().createUserWithEmailAndPassword(self.email, self.password).then(function() {
+                firebase.auth().signInWithEmailAndPassword(self.email, self.password).then(function() {
                     console.log('login ok');
                     self.$router.push({ path: '/manage' });
                 }).catch(function(error) {
