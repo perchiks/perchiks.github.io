@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="12c0af46-6061-4060-920e-825eabab36ea" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/blog.vue" afterPath="$PROJECT_DIR$/src/components/blog.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/editPost.vue" afterPath="$PROJECT_DIR$/src/pages/editPost.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/manage.vue" afterPath="$PROJECT_DIR$/src/pages/manage.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/post.vue" afterPath="$PROJECT_DIR$/src/pages/post.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/signin.vue" afterPath="$PROJECT_DIR$/src/pages/signin.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,16 +15,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_colors.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/_colors.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="manage.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/manage.vue">
           <provider selected="true" editor-type-id="text-editor">
@@ -72,14 +59,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="post.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/post.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="156" column="9" lean-forward="true" selection-start-line="156" selection-start-column="9" selection-end-line="156" selection-end-column="9" />
+            <state relative-caret-position="407">
+              <caret line="153" column="56" lean-forward="true" selection-start-line="153" selection-start-column="20" selection-end-line="153" selection-end-column="56" />
               <folding>
                 <element signature="e#3145#3177#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signin.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pages/signin.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="497">
+              <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -168,7 +165,6 @@
         <option value="$PROJECT_DIR$/src/components/Navigation.vue" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/200.html" />
-        <option value="$PROJECT_DIR$/src/pages/signin.vue" />
         <option value="$PROJECT_DIR$/src/components/order.vue" />
         <option value="$PROJECT_DIR$/src/styles/_colors.scss" />
         <option value="$PROJECT_DIR$/src/pages/IndexPage.vue" />
@@ -181,6 +177,7 @@
         <option value="$PROJECT_DIR$/src/pages/manage.vue" />
         <option value="$PROJECT_DIR$/src/pages/editPost.vue" />
         <option value="$PROJECT_DIR$/src/pages/post.vue" />
+        <option value="$PROJECT_DIR$/src/pages/signin.vue" />
       </list>
     </option>
   </component>
@@ -442,12 +439,12 @@
       <workItem from="1501076036582" duration="886000" />
       <workItem from="1501076979962" duration="45000" />
       <workItem from="1501078863846" duration="69000" />
-      <workItem from="1501226260676" duration="5309000" />
+      <workItem from="1501226260676" duration="5463000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75804000" />
+    <option name="totallyTimeSpent" value="75958000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="23" width="1920" height="987" extended-state="0" />
@@ -697,13 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/signin.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/order.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -822,11 +812,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/post.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="156" column="9" lean-forward="true" selection-start-line="156" selection-start-column="9" selection-end-line="156" selection-end-column="9" />
+        <state relative-caret-position="407">
+          <caret line="153" column="56" lean-forward="true" selection-start-line="153" selection-start-column="20" selection-end-line="153" selection-end-column="56" />
           <folding>
             <element signature="e#3145#3177#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/signin.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

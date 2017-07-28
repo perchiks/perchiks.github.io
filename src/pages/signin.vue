@@ -29,13 +29,14 @@
         },
         methods: {
             auth() {
+                let self = this;
                 firebase.auth().createUserWithEmailAndPassword(this.email, this.password).catch(function(error) {
                     // Handle Errors here.
                     let errorCode = error.code;
                     let errorMessage = error.message;
-                    // ...
+                    console.log('login error');
                     if (!errorMessage) {
-                        this.$router.push({ path: '/manage' });
+                        self.$router.push({ path: '/manage' });
                     }
                 });
             }
