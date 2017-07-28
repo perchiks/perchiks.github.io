@@ -99,9 +99,11 @@
 <script>
     import firebase from 'firebase';
     import adminNavigation from '../components/admin/adminNavigation.vue'
+    import requireAuth from '../mixins/requireAuth';
 
     export default {
         name: 'Post',
+        mixins: [requireAuth],
         components: {
             navigation: adminNavigation
         },
@@ -146,14 +148,6 @@
                     self.file = snapshot.downloadURL;
                 });
             }
-        },
-        mounted() {
-            let self = this;
-            firebase.auth().onAuthStateChanged(function(user) {
-                if (!user) {
-                    self.$router.push({path: '/login'});
-                }
-            });
         }
     }
 </script>

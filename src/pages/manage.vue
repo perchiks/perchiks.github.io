@@ -27,9 +27,11 @@
     import firebase from 'firebase';
     import blog from '../components/blog.vue';
     import adminNavigation from '../components/admin/adminNavigation.vue';
+    import requireAuth from '../mixins/requireAuth';
 
     export default {
         name: 'Manage',
+        mixins: [requireAuth],
         components: {
             blog: blog,
             navigation: adminNavigation
@@ -41,15 +43,9 @@
         },
         mounted() {
             let self = this;
-            firebase.auth().onAuthStateChanged(function(user) {
-                if (user) {
-                    let dbRef = firebase.database().ref('posts');
-                    dbRef.on('value', function(snapshot) {
-                        self.posts = snapshot.val();
-                    });
-                } else {
-                    self.$router.push({path: '/login'});
-                }
+            let dbRef = firebase.database().ref('posts');
+            dbRef.on('value', function(snapshot) {
+                self.posts = snapshot.val();
             });
         }
     }

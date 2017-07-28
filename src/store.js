@@ -12,7 +12,8 @@ const store = new Vuex.Store({
         user: {
             utm: 'direct',
             uid: '',
-            fp: false
+            fp: false,
+            current: false
         }
     },
     mutations: {
@@ -24,7 +25,11 @@ const store = new Vuex.Store({
         },
         fp(state) {
             state.user.fp = true;
+        },
+        login(state, user) {
+            state.user.current = user;
         }
+
     }
 });
 

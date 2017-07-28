@@ -49,6 +49,13 @@ const app = new Vue({
         };
 
         firebase.initializeApp(config);
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                store.commit('login', user);
+            } else {
+                store.commit('login', false);
+            }
+        });
     }
 });
 

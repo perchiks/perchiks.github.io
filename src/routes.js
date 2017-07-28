@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import store from './store';
 import VueCookie from 'vue-cookie';
 import Fingerprint2 from 'fingerprintjs2';
+import firebase from 'firebase';
 Vue.use(VueRouter);
 Vue.use(VueCookie);
 
@@ -79,9 +80,17 @@ router.beforeEach((to, from, next) => {
         store.commit('fp');
         console.log('fp');
     }
+/*    if (to.path.includes('admin')) {
+        if (store.state.user.current !== false) {
+            next();
+        } else {
+            next('/login');
+        }
+    }*/
     next();
 
 });
+
 router.afterEach((to, from, next) => {
     setTimeout(() => {
         window.yaCounter45386919.hit(to.path, {title: document.title, referer: from.path});
@@ -90,5 +99,7 @@ router.afterEach((to, from, next) => {
         });
     }, 500);
 });
+
+
 
 export default router;

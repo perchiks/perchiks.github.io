@@ -67,7 +67,7 @@
                 let self = this;
                 firebase.auth().signInWithEmailAndPassword(self.email, self.password).then(function() {
                     console.log('login ok');
-                    self.$router.push({ path: '/manage' });
+                    self.$router.push({ path: '/admin/manage' });
                 }).catch(function(error) {
                     // Handle Errors here.
                     let errorCode = error.code;
