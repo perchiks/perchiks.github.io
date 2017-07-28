@@ -6,7 +6,7 @@
             <p>{{ item.content }}</p>
         </div>
         <div class="social">
-            <a></a>
+            <router-link :to="fullLink" v-show="item.fullContent"></router-link>
             <nav>
                 <ul>
                     <li>{{ dateP }}</li>
@@ -141,7 +141,9 @@
                     content: '',
                     file: false,
                     likes: '',
-                    date: ''
+                    date: '',
+                    fullContent: false,
+                    id: ''
                 }
             }
         },
@@ -164,10 +166,13 @@
         },
         computed: {
             dateP() {
-                return moment(this.item.date).format('MMM DD');
+                return moment(this.item.date).format('MMM, DD');
             },
             tweetUrl() {
                 return `https://twitter.com/intent/tweet?text=${encodeURI(this.item.content)}&url=${encodeURI('https://pepper.ink')}&hashtags=pepper_ink,перчик&via=pepper_ink`;
+            },
+            fullLink() {
+                return `/blog/${this.item.id}`;
             }
         },
         methods: {

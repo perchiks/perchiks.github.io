@@ -1,16 +1,29 @@
 <template>
-    <article>
-        <img :src="item.file">
-        <h3><router-link :to="'/post/' + item.id">{{item.title}}</router-link></h3>
-        <div class="content" v-html="item.content"></div>
-    </article>
+    <router-link tag="article" :to="'/post/' + item.id">
+        <div>{{item.id}}</div>
+        <div>{{item.content}}</div>
+        <div><img :src="item.file"></div>
+    </router-link>
 </template>
 
 <style lang="scss" scoped="scoped">
     @import '../styles/_colors.scss';
     article {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $color-primary-2;
+        border-top: 1px solid $color-primary-2;
+        cursor: pointer;
+        font-family: 'Houschka';
+        &:hover {
+            background: rgba($color-primary-2, .5);
+            color: white;
+        }
         img {
-            width: 100%;
+            height: 4rem;
+            width: auto;
         }
     }
 </style>

@@ -1,18 +1,22 @@
 <template>
     <section>
+        <navigation></navigation>
         <form>
             <section v-show="!orderSent">
                 <label><input type="text" v-model="post.title" placeholder="Заголовок"></label>
-                <label><textarea v-model="post.content" placeholder="Содержание" rows="15"></textarea></label>
+                <label><textarea v-model="post.content" placeholder="Короткое описание" rows="3"></textarea></label>
+                <label><textarea v-model="post.fullContent" placeholder="Полный текст" rows="15"></textarea></label>
                 <label id="file">
-                    <span class="button" v-if="!loaded">Выбрать</span>
+                    <span class="button" v-if="!loaded && !post.file">Выбрать</span>
+                    <span class="button" v-if="post.file" @click="deleteFile()">Удалить</span>
                     <mark>
-                        <span v-if="!loaded">
+                        <span v-if="!loaded && !post.file">
                             Файл не выбран
                         </span>
-                        <span v-if="loaded">
+                        <span v-if="loaded && !post.file">
                             Файл загружен
                         </span>
+                        <span v-if="post.file">{{ post.file }}</span>
                     </mark>
                     <input type="file" @change="loadFile($event)">
                 </label>
@@ -97,9 +101,13 @@
 
 <script>
     import firebase from 'firebase';
+    import adminNavigation from '../components/admin/adminNavigation.vue'
 
     export default {
         name: 'editPost',
+        components: {
+            navigation: adminNavigation
+        },
         data() {
             return {
                 post: {},
@@ -113,10 +121,11 @@
                 let self = this;
                 firebase.database().ref(`posts/${self.$route.params.post}`).set({
                     id: self.$route.params.post,
-                    title: this.post.title,
-                    content: this.post.content,
+                    title: self.post.title,
+                    content: self.post.content,
                     date: Date.now(),
-                    likes: this.post.likes,
+                    likes: self.post.likes,
+                    fullContent: self.post.fullContent,
                     file: (this.file) ? this.file : 'No file'
                 }).then(function(data) {
                     self.orderSent = true;
@@ -125,7 +134,6 @@
                 });
             },
             loadFile(event) {
-                console.log('file event');
                 let file = event.target.files[0];
                 const name = file.name;
                 let storageRef = firebase.storage().ref();
@@ -135,6 +143,10 @@
                     self.loaded = true;
                     self.file = snapshot.downloadURL;
                 });
+            },
+            deleteFile() {
+                this.file = false;
+                this.post.file = '';
             }
         },
         mounted() {

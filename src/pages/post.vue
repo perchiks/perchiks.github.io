@@ -1,9 +1,11 @@
 <template>
     <section>
+        <navigation></navigation>
         <form>
             <section v-show="!orderSent">
                 <label><input type="text" v-model="post.title" placeholder="Заголовок"></label>
-                <label><textarea v-model="post.content" placeholder="Содержание" rows="15"></textarea></label>
+                <label><textarea v-model="post.content" placeholder="Короткое описание" rows="3"></textarea></label>
+                <label><textarea v-model="post.fullContent" placeholder="Полный текст" rows="15"></textarea></label>
                 <label id="file">
                     <span class="button" v-if="!loaded">Выбрать</span>
                     <mark>
@@ -96,9 +98,13 @@
 
 <script>
     import firebase from 'firebase';
+    import adminNavigation from '../components/admin/adminNavigation.vue'
 
     export default {
         name: 'Post',
+        components: {
+            navigation: adminNavigation
+        },
         data() {
             return {
                 post: {
@@ -119,6 +125,7 @@
                     title: this.post.title,
                     content: this.post.content,
                     date: Date.now(),
+                    fullContent: this.post.fullContent,
                     file: (this.file) ? this.file : 'No file',
                     likes: 0
                 }).then(function(data) {

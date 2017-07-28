@@ -2,7 +2,8 @@ import Vue from 'vue';
 import VueResource from 'vue-resource';
 import VueAnalytics from 'vue-analytics'
 import firebase from 'firebase';
-
+import moment from 'moment';
+moment.locale('ru');
 import store from './store';
 import './styles/index.scss';
 

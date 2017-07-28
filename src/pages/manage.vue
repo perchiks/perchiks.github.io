@@ -1,7 +1,10 @@
 <template>
     <section>
-        <router-link to="/post" class="btn">New post</router-link>
-        <blog class="post" v-for="post in posts" :post="post.id" random="false" :key="post.id"></blog>
+        <navigation></navigation>
+        <div class="wrapper">
+            <h1>Все посты</h1>
+            <blog class="post" v-for="post in posts" :post="post.id" random="false" :key="post.id"></blog>
+        </div>
     </section>
 </template>
 
@@ -9,14 +12,13 @@
     section {
         display: flex;
         flex-direction: column;
-        flex-basis: 50%;
+        flex-basis: 100%;
         align-self: center;
         justify-content: flex-start;
         align-items: center;
-        .post {
-            img {
-                width: 100%;
-            }
+        .wrapper {
+            width: 100%;
+            margin-top: 1.5rem;
         }
     }
 </style>
@@ -24,10 +26,13 @@
 <script>
     import firebase from 'firebase';
     import blog from '../components/blog.vue';
+    import adminNavigation from '../components/admin/adminNavigation.vue';
+
     export default {
         name: 'Manage',
         components: {
-            blog: blog
+            blog: blog,
+            navigation: adminNavigation
         },
         data() {
             return {
