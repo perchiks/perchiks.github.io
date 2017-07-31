@@ -117,6 +117,7 @@
                 let self = this;
                 let order = Math.random().toString(36).substring(7);
                 firebase.database().ref(`orders/${order}`).set({
+                    id: order,
                     fullName: this.fullName,
                     phone: this.phone,
                     email: this.email,
@@ -140,7 +141,7 @@
                 let self = this;
                 ref.put(file).then(function(snapshot) {
                     self.loaded = true;
-                    self.file = snapshot.metadata.fullPath;
+                    self.file = snapshot.downloadURL;
                 });
             }
         }

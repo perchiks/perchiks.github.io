@@ -15,13 +15,13 @@ import HomePage from './pages/NewHome.vue';
 import OrderPage from './pages/OrderPage.vue';
 import PageNotFound from './pages/404.vue';
 import SignIn from './pages/signin.vue';
-import Manage from './pages/manage.vue';
-import Post from './pages/post.vue';
-import editPost from './pages/editPost.vue';
-import fullPost from './pages/fullPost.vue';
-import Blog from './pages/blog.vue';
+import Manage from './pages/admin/posts/listPosts.vue';
+import Post from './pages/admin/posts/addPost.vue';
+import editPost from './pages/admin/posts/editPost.vue';
+import fullPost from './pages/blog/fullPost.vue';
 import BlogAll from './pages/blog/all.vue';
 import Outlet from './pages/outlet.vue';
+import listOrders from './pages/admin/orders/listOrders.vue';
 
 
 /**
@@ -41,6 +41,10 @@ const routes = [
         { path: 'manage', component: Manage, props: {title: 'Посты'}},
         { path: 'post', component: Post, props: {title: 'Посты - Создать'}},
         { path: 'post/:post', component: editPost, props: {title: ''}},
+        { path: 'orders', component: Outlet, children: [
+            { path: 'list', component: listOrders},
+            { path: '', redirect: 'list'}
+        ]}
     ]},
     { path: '/blog', component: Outlet, children: [
         { path: 'all', component: BlogAll, props: {title: 'Блог'}},

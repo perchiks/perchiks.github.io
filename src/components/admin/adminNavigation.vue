@@ -3,7 +3,8 @@
         <ul>
             <li><router-link to="/">На основной сайт</router-link></li>
             <li><router-link to="/admin/manage">Все посты</router-link></li>
-            <li><router-link to="/admin/post">Создать</router-link></li>
+            <li><router-link to="/admin/post">Новый пост</router-link></li>
+            <li><router-link to="/admin/orders/list">Заказы</router-link></li>
         </ul>
     </nav>
 </template>

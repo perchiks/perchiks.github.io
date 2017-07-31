@@ -25,9 +25,9 @@
 
 <script>
     import firebase from 'firebase';
-    import blog from '../components/blog.vue';
-    import adminNavigation from '../components/admin/adminNavigation.vue';
-    import requireAuth from '../mixins/requireAuth';
+    import blog from '../../../components/blog.vue';
+    import adminNavigation from '../../../components/admin/adminNavigation.vue';
+    import requireAuth from '../../../mixins/requireAuth';
 
     export default {
         name: 'Manage',
