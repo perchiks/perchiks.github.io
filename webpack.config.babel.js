@@ -19,6 +19,7 @@ const config = {
     devServer: {
         publicPath: '/dist/js',
         contentBase: path.resolve(__dirname),
+        hot: true,
         historyApiFallback: {
             rewrites: [
                 { from: /.*/, to: `/200.html` }

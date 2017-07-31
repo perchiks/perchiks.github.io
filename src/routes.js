@@ -11,6 +11,7 @@ Vue.use(VueCookie);
  * Pages
  */
 import IndexPage from './pages/IndexPage.vue';
+import HomePage from './pages/NewHome.vue';
 import OrderPage from './pages/OrderPage.vue';
 import PageNotFound from './pages/404.vue';
 import SignIn from './pages/signin.vue';
@@ -33,6 +34,7 @@ import Outlet from './pages/outlet.vue';
  */
 const routes = [
     { path: '/', component: IndexPage},
+    { path: '/launch', component: HomePage},
     { path: '/order', component: OrderPage, props: { title: 'Сделать заказ' }},
     { path: '/login', component: SignIn, props: {title: 'Вход'}},
     { path: '/admin', component: Outlet, children: [
