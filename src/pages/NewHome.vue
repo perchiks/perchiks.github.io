@@ -200,7 +200,7 @@
                 width: 70%;
                 justify-content: center;
                 img {
-                    width: 80%;
+                    width: 45vmax;
                 }
             }
             &:after {
