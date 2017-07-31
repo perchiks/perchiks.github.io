@@ -19,32 +19,50 @@
                 <div class="title"><h2>Mobile</h2></div>
             </div>
         </section>
-        <!--<section class="b-grid">
-            <div>
+        <section class="features">
+            <div class="title">
+                <img src="/dist/img/build.svg">
+                <h3>Title here</h3>
+            </div>
+            <div class="features_content">
                 <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis eu lorem eu vestibulum. Phasellus consectetur eros at consequat congue. Integer nibh lectus, tempor ac luctus et, placerat ac arcu. Nunc consectetur lectus a commodo eleifend. Nulla consequat augue felis, non vestibulum metus lacinia at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec interdum vitae ligula vel vehicula. Aliquam quis commodo lacus.</p>
+                    <div>
+                        <div><img src="//placehold.it/200x200"></div>
+                        <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis eu lorem eu vestibulum. Phasellus consectetur eros at consequat congue. Integer nibh lectus, tempor ac luctus et, placerat ac arcu.</p></div>
+                    </div>
+                    <div>
+                        <div><img src="//placehold.it/200x200"></div>
+                        <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis eu lorem eu vestibulum. Phasellus consectetur eros at consequat congue. Integer nibh lectus, tempor ac luctus et, placerat ac arcu.</p></div>
+                    </div>
+                    <div>
+                        <div><img src="//placehold.it/200x200"></div>
+                        <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis eu lorem eu vestibulum. Phasellus consectetur eros at consequat congue. Integer nibh lectus, tempor ac luctus et, placerat ac arcu.</p></div>
+                    </div>
+                    <div>
+                        <div><img src="//placehold.it/200x200"></div>
+                        <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis eu lorem eu vestibulum. Phasellus consectetur eros at consequat congue. Integer nibh lectus, tempor ac luctus et, placerat ac arcu.</p></div>
+                    </div>
                 </div>
                 <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis eu lorem eu vestibulum. Phasellus consectetur eros at consequat congue. Integer nibh lectus, tempor ac luctus et, placerat ac arcu. Nunc consectetur lectus a commodo eleifend. Nulla consequat augue felis, non vestibulum metus lacinia at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec interdum vitae ligula vel vehicula. Aliquam quis commodo lacus.</p>
+                    <div>
+                        <div><img src="//placehold.it/200x200"></div>
+                        <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis eu lorem eu vestibulum. Phasellus consectetur eros at consequat congue. Integer nibh lectus, tempor ac luctus et, placerat ac arcu.</p></div>
+                    </div>
+                    <div>
+                        <div><img src="//placehold.it/200x200"></div>
+                        <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis eu lorem eu vestibulum. Phasellus consectetur eros at consequat congue. Integer nibh lectus, tempor ac luctus et, placerat ac arcu.</p></div>
+                    </div>
+                    <div>
+                        <div><img src="//placehold.it/200x200"></div>
+                        <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis eu lorem eu vestibulum. Phasellus consectetur eros at consequat congue. Integer nibh lectus, tempor ac luctus et, placerat ac arcu.</p></div>
+                    </div>
+                    <div>
+                        <div><img src="//placehold.it/200x200"></div>
+                        <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis eu lorem eu vestibulum. Phasellus consectetur eros at consequat congue. Integer nibh lectus, tempor ac luctus et, placerat ac arcu.</p></div>
+                    </div>
                 </div>
             </div>
-            <div>
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis eu lorem eu vestibulum. Phasellus consectetur eros at consequat congue. Integer nibh lectus, tempor ac luctus et, placerat ac arcu. Nunc consectetur lectus a commodo eleifend. Nulla consequat augue felis, non vestibulum metus lacinia at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec interdum vitae ligula vel vehicula. Aliquam quis commodo lacus.</p>
-                </div>
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis eu lorem eu vestibulum. Phasellus consectetur eros at consequat congue. Integer nibh lectus, tempor ac luctus et, placerat ac arcu. Nunc consectetur lectus a commodo eleifend. Nulla consequat augue felis, non vestibulum metus lacinia at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec interdum vitae ligula vel vehicula. Aliquam quis commodo lacus.</p>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis eu lorem eu vestibulum. Phasellus consectetur eros at consequat congue. Integer nibh lectus, tempor ac luctus et, placerat ac arcu. Nunc consectetur lectus a commodo eleifend. Nulla consequat augue felis, non vestibulum metus lacinia at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec interdum vitae ligula vel vehicula. Aliquam quis commodo lacus.</p>
-                </div>
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis eu lorem eu vestibulum. Phasellus consectetur eros at consequat congue. Integer nibh lectus, tempor ac luctus et, placerat ac arcu. Nunc consectetur lectus a commodo eleifend. Nulla consequat augue felis, non vestibulum metus lacinia at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec interdum vitae ligula vel vehicula. Aliquam quis commodo lacus.</p>
-                </div>
-            </div>
-        </section>-->
+        </section>
     </article>
 </template>
 
@@ -54,16 +72,12 @@
 
     article {
         height: 100%;
-
-        .navigation {
-            /*position: absolute;
-            top: 0;*/
-            background: rgba(0,0,0,.85);
-
+        * {
+            font-family: 'Houschka';
         }
         .lead {
             background-image: url('/dist/img/rocket.svg');
-            background-size: 100% 80%;
+            background-size: 100% 70%;
             background-position: center top;
             background-repeat: no-repeat;
             height: 90%;
@@ -102,6 +116,11 @@
                 font-weight: bold;
                 display: inline-block;
                 margin-top: .5rem;
+                transition: all ease-in .25s;
+                &:hover {
+                    color: $color-primary-0;
+                    border-color: $color-primary-0;
+                }
             }
 
         }
@@ -143,13 +162,22 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
+            position: relative;
+            z-index: 1;
             > div {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
                 padding: 0 1rem;
-                width: calc(100%/1.75);
+                width: calc(100%/1.61803398875);
+                flex: 1;
+                @include media($medium) {
+                    width: 90%;
+                }
+                @include media($small) {
+                    width: 90%;
+                }
                 .title {
                     padding: 0 1rem;
                 }
@@ -170,8 +198,89 @@
             .center {
                 align-self: center;
                 width: 70%;
+                justify-content: center;
                 img {
-                    width: 100%;
+                    width: 80%;
+                }
+            }
+            &:after {
+                content: "";
+                display: block;
+                height: 100px;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                bottom: -6.25rem;
+                -ms-transform: scaleX(1.1);
+                transform: scaleX(1.1);
+                -ms-transform-origin: center center;
+                transform-origin: center center;
+                background-color: rgba($color-primary-0, .5);
+                border-bottom-left-radius: 100%;
+                border-bottom-right-radius: 100%;
+                z-index: 0;
+            }
+        }
+        .features {
+            position: relative;
+            margin-top: 8rem;
+            height: 100%;
+            &:before {
+                width: 100%;
+                height: 1px;
+                background: #ddd;
+                content: "";
+                position: absolute;
+                top: 60px;
+                z-index: 1;
+            }
+            &:after {
+                z-index: 2;
+                width: 60px;
+                height: 2px;
+                left: 50%;
+                top: 60px;
+                transform: translateX(-50%);
+                background: #fff;
+                content: "";
+                position: absolute;
+            }
+            .title {
+                text-align: center;
+                img {
+                    position: relative;
+                    z-index: 3;
+                    max-width: 5%;
+                }
+            }
+            .features_content {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                height: 70%;
+                padding: 0 4rem;
+                > div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    height: 100%;
+                    flex-basis: 50%;
+                    > div {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 1rem;
+                        > div:first-of-type {
+                            flex-basis: 40%;
+                            padding: 0 1rem;
+                        }
+                        img {
+                            max-width: 100%;
+                        }
+                    }
                 }
             }
         }
