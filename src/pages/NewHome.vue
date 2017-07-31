@@ -171,7 +171,6 @@
                 justify-content: space-between;
                 padding: 0 1rem;
                 width: calc(100%/1.61803398875);
-                flex: 1;
                 @include media($medium) {
                     width: 90%;
                 }
