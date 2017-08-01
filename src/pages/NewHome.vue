@@ -74,6 +74,7 @@
             font-family: 'Houschka';
         }
         .lead {
+            padding-bottom: .5rem;
             img {
                 width: 100%;
             }
