@@ -29,12 +29,12 @@
                 <div class="col-xs">
                     <div class="box">
                         <div class="row start-xs">
-                            <div class="col-xs-3 col-md-2">
+                            <div class="col-xs-4 col-md-2">
                                 <div class="box">
                                     <div class="title"><h2>Web</h2></div>
                                 </div>
                             </div>
-                            <div class="col-xs-9 col-md-8">
+                            <div class="col-xs-8 col-md-8">
                                 <div class="box">
                                     <div class="content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis eu lorem eu vestibulum. Phasellus consectetur eros at consequat congue. Integer nibh lectus, tempor ac luctus et, placerat ac arcu. Nunc consectetur lectus a commodo eleifend. Nulla consequat augue felis, non vestibulum metus lacinia at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec interdum vitae ligula vel vehicula. Aliquam quis commodo lacus.</p></div>
                                 </div>
@@ -46,12 +46,12 @@
                             </div>
                         </div>
                         <div class="row end-xs">
-                            <div class="col-xs-3 col-md-2">
+                            <div class="col-xs-4 col-md-2">
                                 <div class="box">
                                     <div class="title"><h2>Mobile</h2></div>
                                 </div>
                             </div>
-                            <div class="col-xs-9 col-md-8">
+                            <div class="col-xs-8 col-md-8">
                                 <div class="box">
                                     <div class="content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis eu lorem eu vestibulum. Phasellus consectetur eros at consequat congue. Integer nibh lectus, tempor ac luctus et, placerat ac arcu. Nunc consectetur lectus a commodo eleifend. Nulla consequat augue felis, non vestibulum metus lacinia at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec interdum vitae ligula vel vehicula. Aliquam quis commodo lacus.</p></div>
                                 </div>
@@ -114,7 +114,6 @@
             }
         }
         .duotone {
-            max-height: 100%;
             background-image: linear-gradient(to bottom, rgba($color-primary-0, .5), rgba($color-primary-0, .5)), url('/dist/img/bg_gs.png');
             background-size: cover;
             color: white;
