@@ -28,7 +28,7 @@
             <div class="row around-xs">
                 <div class="col-xs">
                     <div class="box">
-                        <div class="row start-xs">
+                        <div class="row start-xs middle-xs">
                             <div class="col-xs-4 col-md-2">
                                 <div class="box">
                                     <div class="title"><h2>Web</h2></div>
@@ -45,7 +45,7 @@
                                 <div class="box"><img src="/dist/img/app.svg"></div>
                             </div>
                         </div>
-                        <div class="row end-xs">
+                        <div class="row end-xs middle-xs">
                             <div class="col-xs-4 col-md-2">
                                 <div class="box">
                                     <div class="title"><h2>Mobile</h2></div>
