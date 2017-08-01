@@ -6,6 +6,7 @@ import moment from 'moment';
 moment.locale('ru');
 import store from './store';
 import './styles/index.scss';
+import '../libs/flexboxgrid/dist/flexboxgrid.min.css';
 
 /**
  * Pages

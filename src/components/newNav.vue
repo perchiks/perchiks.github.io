@@ -11,8 +11,15 @@
     header {
         display: flex;
         flex-direction: row;
+        .logo {
+            flex-grow: 0;
+            @include media($small) {
+                display: none;
+            }
+        }
         nav {
             flex-grow: 1;
+            flex-wrap: wrap;
         }
     }
 </style>

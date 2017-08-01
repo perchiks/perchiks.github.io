@@ -1,6 +1,7 @@
-$small: "only screen and (min-width: 20em)";
-$medium: "only screen and (min-width: 62em)";
-$large: "only screen and (min-width: 75em)";
+$small: "(max-width: 767px)";
+$medium: "(min-width: 768px) and (max-width: 991px)";
+$large: "(min-width: 992px) and (max-width: 1199px)";
+$extra_large: "(min-width: 1200px)";
 $retina: "only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min--moz-device-pixel-ratio: 2),
     only screen and (-o-min-device-pixel-ratio: 2/1),
