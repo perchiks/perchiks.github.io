@@ -7,7 +7,7 @@
     $color2: rgba($color-primary-0, .75);
     @mixin btn($color: $color-primary-0, $inverted: false) {
         color: $color;
-        box-shadow: rgba($color, 0.8) 0 0px 0px .1rem inset;
+        box-shadow: rgba($color, 0.8) 0 0px 0px .25rem inset;
         &:hover {
             @if $inverted == false {
                 color: rgba(255, 255, 255, 0.85);

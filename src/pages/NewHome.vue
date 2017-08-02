@@ -17,7 +17,7 @@
                             <div class="content box">
                                 <h1>Добавь огня своему бизнесу</h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis eu lorem eu vestibulum. Phasellus consectetur eros at consequat congue. Integer nibh lectus, tempor ac luctus et, placerat ac arcu. Nunc consectetur lectus a commodo eleifend. Nulla consequat augue felis, non vestibulum metus lacinia at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec interdum vitae ligula vel vehicula. Aliquam quis commodo lacus.</p>
-                                <btn link="/order">Добавить</btn>
+                                <btn class="btn" link="/order">Добавить</btn>
                             </div>
                         </div>
                     </div>
@@ -98,20 +98,7 @@
                 color: rgba($color-primary-0, .75);
             }
             .btn {
-                border: .25rem solid rgba($color-primary-0, .75);
-                color: rgba($color-primary-0, .75);
-                text-transform: uppercase;
-                text-decoration: none;
-                padding: .25rem .5rem;
-                font-family: 'Houschka';
-                font-weight: bold;
-                display: inline-block;
-                margin-top: .5rem;
-                transition: all ease-in .25s;
-                &:hover {
-                    color: $color-primary-0;
-                    border-color: $color-primary-0;
-                }
+                opacity: .75;
             }
         }
         .web_mobile {
