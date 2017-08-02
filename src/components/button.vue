@@ -24,10 +24,12 @@
         max-width: 9rem;
         text-decoration: none;
         border-radius: .2rem;
-        padding: 1rem 1.5rem;
+        padding: .5rem 1rem;
         text-align: center;
         font-family: 'Houschka';
         font-weight: 500;
+        text-transform: uppercase;
+        padding-top: .65rem;
     }
     a.button {
         @include btn();

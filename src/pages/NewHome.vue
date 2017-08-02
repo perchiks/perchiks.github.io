@@ -56,13 +56,6 @@
                 </div>
             </div>
         </section>
-        <div class="row center-xs middle-xs">
-            <div class="col-xs-8">
-                <div class="box">
-                    8
-                </div>
-            </div>
-        </div>
     </article>
 </template>
 
