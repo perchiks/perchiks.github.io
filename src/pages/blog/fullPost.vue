@@ -8,7 +8,7 @@
         </div>
         <div class="content" v-html="item.fullContent"></div>
         <div class="share">
-            <a :href="tweetUrl" target="_blank"><img src="/dist/img/retweet_b.svg"></a>
+            <a :href="tweetUrl" target="_blank"><img src="/dist/icons/retweet_b.svg"></a>
         </div>
     </article>
 </template>

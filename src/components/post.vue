@@ -10,8 +10,8 @@
             <nav>
                 <ul>
                     <li>{{ dateP }}</li>
-                    <li><a :href="tweetUrl" target="_blank"><img src="/dist/img/retweet.svg"></a></li>
-                    <li @click="like()"><img src="/dist/img/like.svg"> {{ item.likes }}</li>
+                    <li><a :href="tweetUrl" target="_blank"><img src="/dist/icons/retweet.svg"></a></li>
+                    <li @click="like()"><img src="/dist/icons/like.svg"> {{ item.likes }}</li>
                 </ul>
             </nav>
         </div>

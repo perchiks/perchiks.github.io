@@ -11,9 +11,13 @@ html, body, main {
   height: 100%;
 }
 
+* {
+  font-size: 1rem;
+}
+
 body {
   font-family: 'Houschka';
-  font-size: 2vmin;
+  font-size: 1rem;
 }
 
 h1 {
@@ -49,6 +53,7 @@ html {
   font-family: 'Houschka';
   display: flex;
   flex-direction: column;
+  font-size: calc(100% + .2vh + .2vw);
 }
 body {
   margin: 0;
@@ -63,4 +68,8 @@ main {
   margin: auto;
   flex-grow: 1;
   box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
 }
