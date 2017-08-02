@@ -20,7 +20,7 @@
     a {
         transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
         display: inline-block;
-        margin: 1rem auto;
+        margin: .5rem auto;
         max-width: 9rem;
         text-decoration: none;
         border-radius: .2rem;
@@ -41,6 +41,7 @@
         padding-top: .5rem;
         padding-bottom: .4rem;
         font-size: .75rem;
+        margin: .25rem auto;
     }
     a.close {
         box-shadow: none;
