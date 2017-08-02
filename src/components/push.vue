@@ -1,5 +1,5 @@
 <template>
-    <section class="row middle-xs between xs">
+    <section class="row middle-xs between xs" v-show="!pushState">
         <div class="col-xs">
             <div class="box content">
                 Включите push-нотификации для получения горячих новостей от Перчика. Никакого спама, обещаем.
@@ -7,7 +7,7 @@
         </div>
         <div class="col-xs-2 col-md-1">
             <div class="box">
-                <btn link="#" class="sp_notify_prompt" inverted="true" small="true">Включить</btn>
+                <btn link="#" class="sp_notify_prompt" inverted="true" small="true" @click="pushEnabled()">Включить</btn>
             </div>
         </div>
     </section>
@@ -36,6 +36,16 @@
         name: 'Push',
         components: {
             btn: button
+        },
+        computed: {
+            pushState() {
+                return window.localStorage.getItem('push') === '1';
+            }
+        },
+        methods: {
+            pushEnabled() {
+                window.localStorage.setItem('push', '1');
+            }
         }
     }
 </script>
