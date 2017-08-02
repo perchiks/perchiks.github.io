@@ -5,7 +5,7 @@
                 Включите push-нотификации для получения горячих новостей от Перчика. Никакого спама, обещаем.
             </div>
         </div>
-        <div class="col-xs-2 col-md-1">
+        <div class="col-xs-4 col-sm-2 col-md-1 end-xs">
             <div class="box">
                 <btn link="#" class="sp_notify_prompt" inverted="true" small="true" @click="pushEnabled()">Включить</btn>
             </div>

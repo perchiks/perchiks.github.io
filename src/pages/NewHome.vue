@@ -62,9 +62,9 @@
 <style lang="scss" scoped="scoped">
     @import '../styles/_colors.scss';
     @import '../styles/_mq.scss';
-
     article {
-        height: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
         * {
             font-family: 'Houschka';
         }
@@ -108,7 +108,7 @@
             padding-bottom: 1rem;
             height: 100%;
             .content {
-                text-align: center;
+                text-align: left;
             }
             &:before {
                 content: ' ';
