@@ -5,9 +5,17 @@
 <style lang="scss" scoped="scoped">
     @import '../styles/_colors.scss';
     $color2: rgba($color-primary-0, .75);
-    @mixin btn($color: $color-primary-0, $inverted: false) {
+    @mixin btn($color: $color-primary-0, $inverted: false, $small: false) {
         color: $color;
-        box-shadow: rgba($color, 0.8) 0 0px 0px .25rem inset;
+        @if $small == false {
+            box-shadow: rgba($color, 0.8) 0 0px 0px .25rem inset;
+        } @else {
+            @if $inverted == false {
+                box-shadow: rgba($color, 0.8) 0 0px 0px .1rem inset;
+            } @else {
+                box-shadow: rgba(255, 255, 255, 0.8) 0 0px 0px .1rem inset;
+            }
+        }
         &:hover {
             @if $inverted == false {
                 color: rgba(255, 255, 255, 0.85);
@@ -38,6 +46,7 @@
         @include btn(white, true);
     }
     a.small {
+        @include btn(white, true, true);
         max-width: 4rem;
         padding: .25rem .5rem;
         padding-top: .5rem;
