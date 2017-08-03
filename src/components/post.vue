@@ -10,8 +10,8 @@
             <nav>
                 <ul>
                     <li>{{ dateP }}</li>
-                    <li><a :href="tweetUrl" target="_blank"><img src="/dist/icons/retweet.svg"></a></li>
-                    <li @click="like()"><img src="/dist/icons/like.svg"> {{ item.likes }}</li>
+                    <li><a :href="tweetUrl" target="_blank"><i class="icon-retweet"></i></a></li>
+                    <li @click="like()"><i class="icon-like"></i> {{ item.likes }}</li>
                 </ul>
             </nav>
         </div>
@@ -120,6 +120,12 @@
                             display: inline;
                             height: 0.75rem;
                             width: auto;
+                        }
+                        a, i {
+                            font-size: 0.75rem;
+                            text-decoration: none;
+                            color: white;
+                            cursor: pointer;
                         }
                     }
                 }

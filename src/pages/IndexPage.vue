@@ -93,13 +93,11 @@
 </style>
 
 <script>
-    import Blog from '../components/blog.vue';
     import Post from '../components/post.vue';
 
     export default {
         name: 'IndexPage',
         components: {
-            blog: Blog,
             post: Post
         }
     }

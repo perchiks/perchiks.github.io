@@ -14,7 +14,7 @@
                     <nav class="row end-sm start-xs middle-xs">
                         <div class="col-xs">
                             <div class="box">
-                                <a>Nav 1</a>
+                                <router-link to="/"><i class="icon-home"></i></router-link>
                             </div>
                         </div>
                         <div class="col-xs">
@@ -69,6 +69,13 @@
                 font-size: 1rem;
                 text-transform: uppercase;
                 padding: 1rem 0;
+                i {
+                    font-size: 1rem;
+                    color: $color-primary-0;
+                    &:hover {
+                        color: $color-primary-1;
+                    }
+                }
                 &:hover {
                     color: $color-primary-1;
                 }
