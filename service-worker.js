@@ -1,4 +1,4 @@
-var CACHE = 'pepper-v1.1.3';
+var CACHE = 'pepper-v1.1.5';
 
 // On install, cache some resources.
 self.addEventListener('install', function(evt) {
@@ -36,7 +36,41 @@ function precache() {
             './dist/js/bundle.js',
             './dist/img/bg.png',
             './dist/img/bg_gs.png',
-            './manifest.json'
+            './dist/img/logo.svg',
+            './manifest.json',
+            './dist/fonts/hinted-HouschkaRounded-Bold.eot',
+            './dist/fonts/hinted-HouschkaRounded-Bold.ttf',
+            './dist/fonts/hinted-HouschkaRounded-Bold.woff',
+            './dist/fonts/hinted-HouschkaRounded-Bold.woff2',
+
+            './dist/fonts/hinted-HouschkaRounded-DemiBold.eot',
+            './dist/fonts/hinted-HouschkaRounded-DemiBold.ttf',
+            './dist/fonts/hinted-HouschkaRounded-DemiBold.woff',
+            './dist/fonts/hinted-HouschkaRounded-DemiBold.woff2',
+
+            './dist/fonts/hinted-HouschkaRounded-ExtraBold.eot',
+            './dist/fonts/hinted-HouschkaRounded-ExtraBold.ttf',
+            './dist/fonts/hinted-HouschkaRounded-ExtraBold.woff',
+            './dist/fonts/hinted-HouschkaRounded-ExtraBold.woff2',
+
+            './dist/fonts/hinted-HouschkaRounded-Light.eot',
+            './dist/fonts/hinted-HouschkaRounded-Light.ttf',
+            './dist/fonts/hinted-HouschkaRounded-Light.woff',
+            './dist/fonts/hinted-HouschkaRounded-Light.woff2',
+
+            './dist/fonts/hinted-HouschkaRounded-Medium.eot',
+            './dist/fonts/hinted-HouschkaRounded-Medium.ttf',
+            './dist/fonts/hinted-HouschkaRounded-Medium.woff',
+            './dist/fonts/hinted-HouschkaRounded-Medium.woff2',
+
+            './dist/fonts/hinted-HouschkaRounded-Thin.eot',
+            './dist/fonts/hinted-HouschkaRounded-Thin.ttf',
+            './dist/fonts/hinted-HouschkaRounded-Thin.woff',
+            './dist/fonts/hinted-HouschkaRounded-Thin.woff2',
+
+            './dist/icons/icons.eot',
+            './dist/icons/icons.ttf',
+            './dist/icons/icons.woff'
         ]);
     });
 }
