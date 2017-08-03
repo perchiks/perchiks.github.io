@@ -15,7 +15,7 @@ self.addEventListener('fetch', function(evt) {
     var reqContents = (evt.request.url.includes('pepper.ink') || evt.request.url.includes('перчик.com'));
     var noMetrics = !(evt.request.url.includes('google') || evt.request.url.includes('yandex'));
     if (evt.request.method === 'GET' && reqContents && noMetrics) {
-        console.log('The service worker is serving the asset.');
+        //console.log('The service worker is serving the asset.');
         // You can use `respondWith()` to answer immediately, without waiting for the
         // network response to reach the service worker...
         evt.respondWith(fromCache(evt.request));
@@ -47,7 +47,13 @@ function precache() {
 function fromCache(request) {
     return caches.open(CACHE).then(function (cache) {
         return cache.match(request).then(function (matching) {
-            return matching || Promise.reject('no-match');
+            if (matching) {
+                return matching
+            } else {
+                return fetch(request).then(function(response) {
+                    return response;
+                });
+            };
         });
     });
 }
