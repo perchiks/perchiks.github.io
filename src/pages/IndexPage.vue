@@ -30,7 +30,7 @@
     }
     article {
         display: flex;
-        height: 80%;
+        height: 95vh;
         flex-direction: column;
         justify-content: center;
         .rnd {

@@ -19,6 +19,14 @@ Vue.use(VueAnalytics, {
     router
 });
 
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('./service-worker.js');
+    navigator.serviceWorker.ready.then(function() {
+
+    });
+}
+
 /**
  * Main component
  * @type {Vue}
@@ -57,11 +65,6 @@ const app = new Vue({
                 store.commit('login', false);
             }
         });
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker
-                .register('./service-worker.js')
-                .then(function() { console.log('Registered service worker!'); });
-        }
     }
 });
 
