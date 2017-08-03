@@ -1,0 +1,8 @@
+{
+  "name": "Перчик",
+  "short_name": "Перчик",
+  "lang": "ru",
+  "start_url": "/",
+  "display": "browser",
+  "theme_color": "#EE3324"
+}
