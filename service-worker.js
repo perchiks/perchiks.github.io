@@ -1,4 +1,4 @@
-var CACHE = 'pepper-v1.12';
+var CACHE = 'pepper-v1.1.3';
 
 // On install, cache some resources.
 self.addEventListener('install', function(evt) {
@@ -30,8 +30,9 @@ self.addEventListener('fetch', function(evt) {
 function precache() {
     return caches.open(CACHE).then(function (cache) {
         return cache.addAll([
+            './',
+            './launch',
             './200.html',
-            './manifest.json',
             './dist/js/bundle.js',
             './dist/img/bg.png',
             './dist/img/bg_gs.png'
