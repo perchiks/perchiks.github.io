@@ -15,13 +15,16 @@ self.addEventListener('fetch', function(evt) {
     var reqContents = (evt.request.url.includes('pepper.ink') || evt.request.url.includes('перчик.com'));
     var noMetrics = !(evt.request.url.includes('google') || evt.request.url.includes('yandex'));
     if (evt.request.method === 'GET' && reqContents && noMetrics) {
-        //console.log('The service worker is serving the asset.');
-        // You can use `respondWith()` to answer immediately, without waiting for the
-        // network response to reach the service worker...
-        evt.respondWith(fromCache(evt.request));
-        // ...and `waitUntil()` to prevent the worker from being killed until the
-        // cache is updated.
-        evt.waitUntil(update(evt.request));
+        evt.respondWith(
+            caches.open(CACHE).then(function(cache) {
+                return cache.match(evt.request).then(function (response) {
+                    return response || fetch(evt.request).then(function(response) {
+                            cache.put(evt.request, response.clone());
+                            return response;
+                        });
+                });
+            })
+        );
     }
 });
 
@@ -75,22 +78,6 @@ function precache() {
     });
 }
 
-// Open the cache where the assets were stored and search for the requested
-// resource. Notice that in case of no matching, the promise still resolves
-// but it does with `undefined` as value.
-function fromCache(request) {
-    return caches.open(CACHE).then(function (cache) {
-        return cache.match(request).then(function (matching) {
-            if (matching) {
-                return matching
-            } else {
-                return fetch(request).then(function(response) {
-                    return response;
-                });
-            };
-        });
-    });
-}
 
 // Update consists in opening the cache, performing a network request and
 // storing the new response data.
