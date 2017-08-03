@@ -35,7 +35,8 @@ function precache() {
             './200.html',
             './dist/js/bundle.js',
             './dist/img/bg.png',
-            './dist/img/bg_gs.png'
+            './dist/img/bg_gs.png',
+            './manifest.json'
         ]);
     });
 }
