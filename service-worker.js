@@ -1,4 +1,4 @@
-var CACHE = 'pepper-v1.1.9';
+var CACHE = 'pepper-v1.1.91';
 
 // On install, cache some resources.
 self.addEventListener('install', function(evt) {
