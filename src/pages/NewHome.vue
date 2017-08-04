@@ -24,7 +24,7 @@
                 </div>
             </div>
         </section>
-        <section class="web_mobile">
+        <section class="web_mobile" :class="webpClass">
             <div class="row around-xs fs">
                 <div class="col-xs-12 col-md-8 fs">
                     <div class="box fs">
@@ -119,10 +119,20 @@
                 height: 100%;
                 z-index: -1;
                 opacity: 0.4;
-                background-image: url('/dist/img/bg_gs.webp');
+
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
+            }
+            &.webp {
+                &:before {
+                    background-image: url('/dist/img/bg_gs.webp');
+                }
+            }
+            &.no-webp {
+                &:before {
+                    background-image: url('/src/img/bg_gs.png');
+                }
             }
         }
     }
@@ -140,6 +150,27 @@
             newNav: newNav,
             btn: button,
             push: push
+        },
+        data() {
+            return {
+                webp: false
+            }
+        },
+        computed: {
+            webpClass() {
+                return (this.webp) ? 'webp' : 'no-webp';
+            }
+        },
+        mounted() {
+            let self = this;
+            Modernizr.on('webp', function(result) {
+                if (result) {
+                    // supported
+                    self.webp = true;
+                } else {
+                    self.webp = false;
+                }
+            });
         }
     }
 </script>

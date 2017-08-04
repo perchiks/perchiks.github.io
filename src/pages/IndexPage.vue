@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main :class="webpClass">
         <header>
             <div class="logo"><img src="/dist/img/logo.svg"></div>
             <nav></nav>
@@ -16,10 +16,15 @@
     //------- NEW -----------
     main {
         height: 100%;
-        background: linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.4)), url(/dist/img/bg.webp);
         background-repeat: no-repeat;
         background-size: cover, cover;
         background-position: center;
+        &.webp {
+            background: linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.4)), url(/dist/img/bg.webp);
+        }
+        &.no-webp {
+            background: linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.4)), url(/src/img/bg.png);
+        }
         header {
             display: flex;
             flex-direction: row;
@@ -99,6 +104,27 @@
         name: 'IndexPage',
         components: {
             post: Post
+        },
+        data() {
+            return {
+                webp: false
+            }
+        },
+        computed: {
+            webpClass() {
+                return (this.webp) ? 'webp' : 'no-webp';
+            }
+        },
+        mounted() {
+            let self = this;
+            Modernizr.on('webp', function(result) {
+                if (result) {
+                    // supported
+                    self.webp = true;
+                } else {
+                    self.webp = false;
+                }
+            });
         }
     }
 </script>
