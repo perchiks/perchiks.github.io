@@ -3,6 +3,84 @@
   "short_name": "Перчик",
   "lang": "ru",
   "start_url": "/",
-  "display": "browser",
-  "theme_color": "#EE3324"
+  "display": "standalone",
+  "theme_color": "#EE3324",
+  "icons": [
+    {
+      "src": "/favicon/apple-touch-icon-57x57.png",
+      "sizes": "57x57"
+    },
+    {
+      "src": "/favicon/apple-touch-icon-60x60.png",
+      "sizes": "60x60"
+    },
+    {
+      "src": "/favicon/apple-touch-icon-72x72.png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "favicon/apple-touch-icon-76x76.png",
+      "sizes": "76x76"
+    },
+    {
+      "src": "/favicon/apple-touch-icon-114x114.png",
+      "sizes": "114x114"
+    },
+    {
+      "src": "/favicon/apple-touch-icon-120x120.png",
+      "sizes": "120x120"
+    },
+    {
+      "src": "/favicon/apple-touch-icon-144x144.png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/favicon/apple-touch-icon-152x152.png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "/favicon/favicon.ico"
+    },
+    {
+      "src": "/favicon/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/favicon-32x32.png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/favicon/favicon-96x96.png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/favicon/favicon-128.png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/favicon/favicon-196x196.png",
+      "sizes": "196x196"
+    },
+    {
+      "src": "/favicon/mstile-70x70.png",
+      "sizes": "70x70"
+    },
+    {
+      "src": "/favicon/mstile-144x144.png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/favicon/mstile-150x150.png",
+      "sizes": "150x150"
+    },
+    {
+      "src": "/favicon/mstile-310x150.png",
+      "sizes": "310x150"
+    },
+    {
+      "src": "/favicon/mstile-310x310.png",
+      "sizes": "310x310"
+    }
+  ]
 }
