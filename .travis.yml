@@ -5,7 +5,7 @@ before_script:
   - npm install -g webpack
   - npm install -g gulp-cli
 script:
-  - webpack -p
+  - NODE_ENV=production webpack -p
   - gulp
 deploy:
   provider: surge

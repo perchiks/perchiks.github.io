@@ -8,6 +8,11 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const eslintConfig = fs.readFileSync('.eslintrc');
 const LIBS = path.resolve(__dirname, 'libs');
 const NODE_MODULES = path.resolve(__dirname, 'node_modules');
+
+function vueEnv() {
+    return (process.env.NODE_ENV === 'production') ? 'vue/dist/vue.min.js' : 'vue/dist/vue.esm.js';
+}
+
 const config = {
     context: path.resolve(__dirname, 'src'),
     entry: ['./app.js'],
@@ -29,7 +34,7 @@ const config = {
     resolve: {
         modules: [LIBS, NODE_MODULES],
         alias: {
-            'vue': 'vue/dist/vue.esm.js'
+            'vue': vueEnv()
         }
     },
     module: {
