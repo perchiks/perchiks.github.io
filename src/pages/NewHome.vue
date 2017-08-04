@@ -131,7 +131,7 @@
             }
             &.no-webp {
                 &:before {
-                    background-image: url('/src/img/bg_gs.png');
+                    background-image: url('/dist/img/bg_gs.png');
                 }
             }
         }

@@ -23,7 +23,7 @@
             background: linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.4)), url(/dist/img/bg.webp);
         }
         &.no-webp {
-            background: linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.4)), url(/src/img/bg.png);
+            background: linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.4)), url(/dist/img/bg.png);
         }
         header {
             display: flex;
