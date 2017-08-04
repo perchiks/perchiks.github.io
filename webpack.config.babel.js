@@ -114,7 +114,7 @@ const config = {
                     ecma: 8
                 }
             })
-    ]
+        ]
 };
 
 export default config;
