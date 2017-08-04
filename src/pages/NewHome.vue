@@ -119,7 +119,7 @@
                 height: 100%;
                 z-index: -1;
                 opacity: 0.4;
-                background-image: url('/dist/img/bg_gs.png');
+                background-image: url('/dist/img/bg_gs.webp');
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;

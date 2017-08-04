@@ -7,6 +7,7 @@ moment.locale('ru');
 import store from './store';
 import './styles/index.scss';
 import '../libs/flexboxgrid/dist/flexboxgrid.min.css';
+import * as webp from 'webpjs';
 
 /**
  * Pages

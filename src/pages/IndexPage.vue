@@ -16,7 +16,7 @@
     //------- NEW -----------
     main {
         height: 100%;
-        background: linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.4)), url(/dist/img/bg.png);
+        background: linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.4)), url(/dist/img/bg.webp);
         background-repeat: no-repeat;
         background-size: cover, cover;
         background-position: center;

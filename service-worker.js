@@ -1,4 +1,4 @@
-var CACHE = 'pepper-v1.1.8';
+var CACHE = 'pepper-v1.1.9';
 
 // On install, cache some resources.
 self.addEventListener('install', function(evt) {
@@ -37,8 +37,8 @@ function precache() {
             './launch',
             './200.html',
             './dist/js/bundle.js',
-            './dist/img/bg.png',
-            './dist/img/bg_gs.png',
+            './dist/img/bg.webp',
+            './dist/img/bg_gs.webp',
             './dist/img/logo.svg',
             './dist/img/rocket.svg',
             './manifest.json',
