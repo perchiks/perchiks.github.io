@@ -104,8 +104,7 @@
         .web_mobile {
             position: relative;
             color: $color-primary-0;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
+            padding: 1rem;
             height: 100%;
             .content {
                 text-align: left;
