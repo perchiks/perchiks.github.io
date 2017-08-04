@@ -5,6 +5,7 @@
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#EE3324",
+  "background_color": "#FFFFFF",
   "icons": [
     {
       "src": "/favicon/apple-touch-icon-57x57.png",
