@@ -3,20 +3,32 @@ $primary: rgb(238,50,36);
 
 // As hex codes */
 
-$color-primary-0: #EE3324;	// Main Primary color */
-$color-primary-1: #FF8278;
-$color-primary-2: #FC5C4F;
-$color-primary-3: #C3180B;
-$color-primary-4: #9B0B00;
+$color-primary-0: #ED1C26;	// Main Primary color */
+$color-primary-1: #FC7279;
+$color-primary-2: #F94952;
+$color-primary-3: #C00711;
+$color-primary-4: #980008;
+
+$color-complement-0: #28C617;	// Main Complement color */
+$color-complement-1: #6FDC64;
+$color-complement-2: #4BCF3D;
+$color-complement-3: #15A006;
+$color-complement-4: #0C7E00;
 
 
 
 // As RGBa codes */
 
-$rgba-primary-0: rgba(238, 51, 36,1);	// Main Primary color */
-$rgba-primary-1: rgba(255,130,120,1);
-$rgba-primary-2: rgba(252, 92, 79,1);
-$rgba-primary-3: rgba(195, 24, 11,1);
-$rgba-primary-4: rgba(155, 11,  0,1);
+$rgba-primary-0: rgba(237, 28, 38,1);	// Main Primary color */
+$rgba-primary-1: rgba(252,114,121,1);
+$rgba-primary-2: rgba(249, 73, 82,1);
+$rgba-primary-3: rgba(192,  7, 17,1);
+$rgba-primary-4: rgba(152,  0,  8,1);
+
+$rgba-complement-0: rgba( 40,198, 23,1);	// Main Complement color */
+$rgba-complement-1: rgba(111,220,100,1);
+$rgba-complement-2: rgba( 75,207, 61,1);
+$rgba-complement-3: rgba( 21,160,  6,1);
+$rgba-complement-4: rgba( 12,126,  0,1);
 
 $golden-ratio: 1.61803398875;

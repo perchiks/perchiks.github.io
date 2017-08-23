@@ -39,12 +39,12 @@
         },
         computed: {
             pushState() {
-                return window.localStorage.getItem('push') === '1';
+                return localStorage.getItem('push') === '1';
             }
         },
         methods: {
             pushEnabled() {
-                window.localStorage.setItem('push', '1');
+                localStorage.setItem('push', '1');
             }
         }
     }
